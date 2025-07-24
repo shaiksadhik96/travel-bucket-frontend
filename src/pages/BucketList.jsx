@@ -8,7 +8,7 @@ export default function BucketList() {
 
   const fetchPlaces = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/places");
+      const res = await axios.get("https://travel-bucket-backend-1.onrender.com/api/places");
       setPlaces(res.data);
     } catch (err) {
       console.error("Error fetching places:", err);
@@ -17,7 +17,7 @@ export default function BucketList() {
 
   const handleToggleVisited = async (id, visited) => {
     try {
-      await axios.put(`http://localhost:5000/api/places/${id}`, {
+      await axios.put(`https://travel-bucket-backend-1.onrender.com/api/places/${id}`, {
         visited: !visited,
       });
       fetchPlaces();
@@ -29,7 +29,7 @@ export default function BucketList() {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this place?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/places/${id}`);
+      await axios.delete(`https://travel-bucket-backend-1.onrender.com/api/places/${id}`);
       fetchPlaces();
     } catch (err) {
       console.error("Error deleting place:", err);

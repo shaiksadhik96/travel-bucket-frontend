@@ -9,19 +9,19 @@ function PlaceList() {
 
   useEffect(() => {
     const fetchPlaces = async () => {
-      const response = await axios.get('http://localhost:5000/api/places');
+      const response = await axios.get('https://travel-bucket-backend-1.onrender.com/api/places');
       setPlaces(response.data);
     };
     fetchPlaces();
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/places/${id}`);
+    await axios.delete(`https://travel-bucket-backend-1.onrender.com/api/places/${id}`);
     setPlaces(places.filter(place => place._id !== id));
   };
 
   const toggleVisited = async (id, visited) => {
-    await axios.put(`http://localhost:5000/api/places/${id}`, { visited: !visited });
+    await axios.put(`https://travel-bucket-backend-1.onrender.com/api/places/${id}`, { visited: !visited });
     setPlaces(places.map(p => (p._id === id ? { ...p, visited: !visited } : p)));
   };
 
