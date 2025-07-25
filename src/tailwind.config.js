@@ -1,16 +1,15 @@
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        primary: '#1D4ED8', // Example primary color
-        secondary: '#9333EA', // Example secondary color
-        accent: '#FBBF24', // Example accent color
-      },
+// vite.config.ts or vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  optimizeDeps: {
+    exclude: ['react-router', 'framer-motion'],
+  },
+  build: {
+    rollupOptions: {
+      external: ['react-router', 'framer-motion'],
     },
   },
-  plugins: [],
-}
+});
