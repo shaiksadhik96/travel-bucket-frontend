@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import React from 'react';
 function Home() {
   return (
     <div style={{ fontFamily: 'sans-serif', backgroundColor: '#f8fafc' }}>

@@ -1,10 +1,10 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import AddPlace from './pages/AddPlace';
 import BucketList from './pages/BucketList';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 
 function App() {
   return (
