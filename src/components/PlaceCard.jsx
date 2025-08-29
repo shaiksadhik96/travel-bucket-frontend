@@ -1,3 +1,4 @@
+import React from 'react';
 // src/components/PlaceCard.jsx
 
 export default function PlaceCard({ place, onToggleVisited, onDelete }) {
