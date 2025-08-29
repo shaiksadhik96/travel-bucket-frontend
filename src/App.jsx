@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AddPlace from './pages/AddPlace';
 import BucketList from './pages/BucketList';
+import PlaceList from './pages/PlaceList';
+import Navbar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
@@ -10,12 +12,14 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100">
+        {/* <Navbar /> */}
         
         <main className="flex-grow container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/add" element={<AddPlace />} />
             <Route path="/list" element={<BucketList />} />
+            <Route path="/placelist" element={<PlaceList />} />
           </Routes>
         </main>
         <footer className="text-center text-sm text-gray-400 py-6 border-t border-gray-800">

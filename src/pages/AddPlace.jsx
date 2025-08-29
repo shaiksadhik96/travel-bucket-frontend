@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-
+import React from 'react';
 function AddPlace() {
   const [place, setPlace] = useState({ name: '', notes: '', image: '', visited: false });
   const [isSubmitting, setIsSubmitting] = useState(false);
