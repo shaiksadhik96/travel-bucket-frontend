@@ -17,7 +17,7 @@ function AddPlace() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-  await axios.post('http://localhost:5000/api/places', place);
+  await axios.post('https://travel-bucket-backend-3yy2-ds4hxis01-sadhiks-projects-c1c36138.vercel.app/api/places', place);
       setPlace({ name: '', notes: '', image: '', visited: false });
       alert('Place added successfully!');
     } catch (error) {
